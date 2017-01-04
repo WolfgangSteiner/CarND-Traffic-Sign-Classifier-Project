@@ -16,7 +16,7 @@ for id,label in csv.reader(open('extra/labels.csv', 'r')):
     labels.append(label)
 
 data = np.array(data)
-labels = np.array(labels)
+labels = np.array(labels, dtype=np.int)
 
 with open('extra/labels.pickle','wb') as f:
     pickle.dump(labels,f)
